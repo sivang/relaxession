@@ -71,12 +71,7 @@ PRODUCTION = False
 SYSTEM_NAME = 'configuration'
 NODE_HELLO = "{'couchdb': 'Welcome', 'version': '0.11.0'}"
 
-if PRODUCTION:
-	NODE_LIST = [ '85.17.233.129', '173.45.121.18', '216.75.11.76', '82.103.128.198' ]
-else:
-	NODE_LIST = [ '10.200.10.157', '10.200.10.138', '10.200.10.152' ]
-
-NODE_LIST = [ '192.168.1.100', '192.168.1.103' ]
+NODE_LIST = [ '10.200.10.157', '10.200.10.138', '10.200.10.152' ]
 
 COUCHDB_PORT = 5984
 BASE_PORT = 9000

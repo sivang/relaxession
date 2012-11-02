@@ -1,0 +1,36 @@
+Relaxession 0.9
+===============
+
+Relaxession is a set of Python scripts and modules to enable fault tolerant shared storage across public WAN discrete
+nodes or data centers. Relaxession entails automatic health monitoring of CouchDB replication.
+
+
+Relaxession also makes heavy use of CouchDBKit, which is at the time
+only available through Python's easy_install:
+
+$ curl -O http://peak.telecommunity.com/dist/ez_setup.py
+$ sudo python ez_setup.py -U setuptools
+$ sudo easy_install -U Couchdbkit
+
+After that, make sure you have autossh installed or install
+it using your OS's packaging system. (Relaxession uses it for SSH tunnel keepalive)
+
+How To Run:
+-----------
+
+- Copy all the .py files to a desired deployment folder.
+- Copy the file 'find_local_ip.pl' to /root on the deployed server.
+- Edit configuration.py to your needs and server scheme.
+  The configuration file includes inline documentation for the
+  various options.
+- Make sure you have 'screen' on the running machine, if not
+  just install it using your OS's package system.
+- After all is set up enter this commands to run it in the background using screen:
+  sivan@sivan-desktop:~$ screen
+  sivan@sivan-desktop:~$ ./connmanager.py
+  (Then hit CTRL-(A+D) to detach from the session)
+  Relaxession's ConnectionManager is running and taking care of health of
+  replication connections. 
+
+  Relaxation time is now.
+
